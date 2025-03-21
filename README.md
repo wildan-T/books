@@ -102,3 +102,44 @@ late Completer completer;
 Penjelasan:
 Setelah 5 detik, nilai 42 tersedia di Future yang dikembalikan oleh getNumber().
 ![Capture soal 5](images/books5.gif)
+
+### Soal 6
+```dart
+Future calculate() async {
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError({});
+    }
+}
+
+getNumber() 
+    .then((value) {
+      setState(() {
+        result = value.toString();
+      });
+    })
+    .catchError((e) {
+      result = 'An Error Occurred';
+    });
+```
+Penjelasan:
+1. getNumber() tetap sama seperti sebelumnya, tetapi cara menggunakannya berbeda.
+2. calculate() menggunakan try-catch untuk menangani error:
+    - Jika sukses, Future selesai dengan complete(42).
+    - Jika gagal, Future akan menyelesaikan dengan error (completeError({})).
+3. Ketika memanggil getNumber(), kita menangani hasilnya dengan:
+    - then((value) { ... }) → Jika sukses, hasil disimpan di result.
+    - catchError((e) { ... }) → Jika gagal, akan menampilkan pesan error "An Error Occurred".
+    
+Perbedaan dengan langkah 2 adalah tidak ada error handling:
+* Tanpa error handling:
+    - Jika terjadi error, Future tidak akan pernah selesai.
+    - Kode yang menunggu hasilnya akan terjebak selamanya.
+    - UI bisa menjadi tidak responsif atau stuck.
+* Dengan error handling:
+    - Jika terjadi error, Future akan selesai dengan completeError().
+    - catchError() dapat menangani error dengan baik.
+    - Aplikasi tetap stabil dan responsif.
+![Capture soal 6](images/books6.gif)
