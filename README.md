@@ -132,7 +132,7 @@ Penjelasan:
 3. Ketika memanggil getNumber(), kita menangani hasilnya dengan:
     - then((value) { ... }) → Jika sukses, hasil disimpan di result.
     - catchError((e) { ... }) → Jika gagal, akan menampilkan pesan error "An Error Occurred".
-    
+
 Perbedaan dengan langkah 2 adalah tidak ada error handling:
 * Tanpa error handling:
     - Jika terjadi error, Future tidak akan pernah selesai.
@@ -143,3 +143,7 @@ Perbedaan dengan langkah 2 adalah tidak ada error handling:
     - catchError() dapat menangani error dengan baik.
     - Aplikasi tetap stabil dan responsif.
 ![Capture soal 6](images/books6.gif)
+
+## Praktikum 4
+### Soal 7
+![Capture soal 7](images/books7.gif)
