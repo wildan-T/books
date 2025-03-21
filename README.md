@@ -82,3 +82,23 @@ Penjelasan:
     - Total waktu eksekusi = 3 + 3 + 3 = 9 detik (karena dijalankan secara berurutan).
 4. setState(() { result = total.toString(); }); -> Memperbarui UI setelah semua operasi selesai (9 detik), nilai total dikonversi ke String dan ditampilkan di UI.
 ![Capture soal 4](images/books4.gif)
+
+## Praktikum 3
+### Soal 5
+```dart
+late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+  }
+```
+Penjelasan:
+Setelah 5 detik, nilai 42 tersedia di Future yang dikembalikan oleh getNumber().
+![Capture soal 5](images/books5.gif)
