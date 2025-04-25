@@ -166,3 +166,19 @@ Kelebihan:
 ## Praktikum 5
 ### Soal 9
 ![Capture soal 9](images/books8.gif)
+
+### Soal 10
+Hasilnya sama tapi ada perbedaan
+Perbedaan langkah 1 dan langkah 4
+* Method returnError()
+    - Kurang rapi kalau logic kompleks
+    - Penanganan error Diatur langsung di UI
+
+* Method handleError()
+    - Lebih rapi, reusable
+    - Penanganan error diatur dalam method terpisah
+
+## Praktikum 6
+### Soal 12
+Bisa, Karena browser modern (seperti Chrome, Firefox, Edge) mendukung HTML5 Geolocation API, yang memungkinkan web app (termasuk Flutter Web) untuk meminta lokasi perangkat.
+![Capture soal 12](images/books9.gif)
