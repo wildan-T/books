@@ -147,3 +147,22 @@ Perbedaan dengan langkah 2 adalah tidak ada error handling:
 ## Praktikum 4
 ### Soal 7
 ![Capture soal 7](images/books7.gif)
+
+### Soal 8
+Perbedaan langkah 1 dan langkah 4
+* Future.wait<int>
+Kelebihan:
+    - Eksekusi semua Future secara paralel, lalu mengambil hasilnya sekaligus.
+    - Cocok jika kita ingin menunggu semua Future selesai tanpa harus mengelolanya satu per satu.
+    - Tidak fleksibel dalam menangani error → Jika satu Future gagal, semua dianggap gagal.
+    - Tidak bisa menambah Future setelah Future.wait([...]) dipanggil.
+
+* FutureGroup<int>
+    - Lebih fleksibel → Kita bisa menambahkan Future satu per satu sebelum close().
+    - Bisa menangani Future secara lebih dinamis, misalnya kita bisa menambahkan Future berdasarkan kondisi tertentu.
+    - Harus menggunakan package async, karena FutureGroup bukan bagian dari Dart core.
+    - Tidak seintuitif Future.wait() jika hanya ingin menjalankan beberapa Future sederhana.
+
+## Praktikum 5
+### Soal 9
+![Capture soal 9](images/books8.gif)
