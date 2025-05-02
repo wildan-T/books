@@ -193,5 +193,10 @@ Ya, Menambahkan snapshot.hasError membuat UI informatif karena menangani kasus e
 
 ## Praktikum 8
 ### Soal 16
-Color diset menjadi warna yang dipilih. Karena Fungsi Navigator.pop() akan Menutup (pop) halaman NavigationSecond. Mengirimkan nilai color kembali ke halaman sebelumnya (NavigationFirst) sebagai return value dari Navigator.push(). Nilai color dari halaman kedua dikembalikan ke color = await Navigator.push(...);. Kemudian setState() dipanggil untuk memicu rebuild. Background halaman NavigationFirst berubah warna sesuai pilihan.
+Warna background diset menjadi warna yang dipilih. Karena Fungsi Navigator.pop() akan Menutup (pop) halaman NavigationSecond. Mengirimkan nilai color kembali ke halaman sebelumnya (NavigationFirst) sebagai return value dari Navigator.push(). Nilai color dari halaman kedua dikembalikan ke color = await Navigator.push(...);. Kemudian setState() dipanggil untuk memicu rebuild. Background halaman NavigationFirst berubah warna sesuai pilihan.
 ![Capture soal 16](images/books12.gif)
+
+## Praktikum 9
+### Soal 17
+Warna background diset menjadi warna yang dipilih. ketika klik tombol di dialog	Warna langsung diubah di variabel color, lalu dialog ditutup (pop). Kembali ke layar utama	setState() dipanggil, sehingga UI dibangun ulang. UI berubah warna Background color berubah sesuai warna baru.
+![Capture soal 17](images/books13.gif)
