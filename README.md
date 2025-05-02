@@ -182,3 +182,8 @@ Perbedaan langkah 1 dan langkah 4
 ### Soal 12
 Bisa, Karena browser modern (seperti Chrome, Firefox, Edge) mendukung HTML5 Geolocation API, yang memungkinkan web app (termasuk Flutter Web) untuk meminta lokasi perangkat.
 ![Capture soal 12](images/books9.gif)
+
+## Praktikum 7
+### Soal 13
+Ya, terdapat perbedaan pada UI-nya. Perbedaan antara kode sekarang dengan FutureBuilder dan kode sebelumnya dengan setState terletak pada cara UI diperbarui saat data lokasi sudah tersedia.FutureBuilder secara otomatis membangun ulang UI berdasarkan status Future, sehingga lebih rapi dan reaktif tanpa perlu memanggil setState secara manual. Sementara pada versi setState, kamu harus menunggu hasil secara manual dan memicu pembaruan UI dengan setState setelah data diterima.
+![Capture soal 13](images/books10.gif)
